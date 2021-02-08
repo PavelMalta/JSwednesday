@@ -24,10 +24,20 @@ export const ChangeCurrencyFieldAC = (amountOfBYN: string, amountOfCurrency: str
 };
 
 export type ChangeAction = {
+    type: ACTIONS_TYPE.CHANGE_CHANGE_ACTION
+    payload: {
+        isBuying: boolean
+    }
 };
 
 // @ts-ignore
 export const ChangeActionAC = (isBuying: boolean): ChangeAction => {
+    return {
+        type: ACTIONS_TYPE.CHANGE_CHANGE_ACTION,
+        payload: {
+            isBuying
+        }
+    }
 };
 
 export type ChangeCurrentCurrencyType = {
