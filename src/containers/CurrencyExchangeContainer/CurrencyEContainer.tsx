@@ -5,8 +5,9 @@ import {
     ChangeActionAC,
     ChangeCurrencyFieldAC,
     ChangeCurrentCurrencyAC,
+    useDispatch,
 } from '../../redux/actions';
-import {connect, useDispatch} from 'react-redux';
+import {connect} from 'react-redux';
 
 
 const CurrencyEContainer: React.FC<CurrencyState> = props => {
