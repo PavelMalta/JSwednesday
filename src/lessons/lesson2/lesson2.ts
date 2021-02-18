@@ -144,7 +144,15 @@ function superSum(n:number) {
 // Task 06
 // написать функцию, которая повторяет функционал метода flat массива на всю глубину.
 
-
+function customFlat(arr: any):any {
+    //@ts-ignore
+    return arr.reduce((acc, current) => {
+        if(Array.isArray(current)) return acc.concat(customFlat(current))
+        return [...acc, current]
+    }, [])
+}
+let a = [1,2,3,[4,5,[6,7]]]
+console.log(customFlat(a))
 
 // just a plug
 export default () => {};
