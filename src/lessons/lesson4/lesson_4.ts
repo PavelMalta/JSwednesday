@@ -108,25 +108,76 @@ console.log('lesson 4');
 // 2 3 4 1 5
 
 //Task 5
-console.log(1);
-function f() {
-    console.log(2)
-}
-setTimeout( () => {
-    console.log(3);
-    let p = new Promise((res,rej) => {
-        console.log(4);
-        res();
-    });
-    p.then(()=>f())
-}, 0);
-let l = new Promise((res,rej) => {
-    console.log(5);
-    rej()
-});
-l.then(res => console.log(res)).catch(() => console.log(6));
-console.log(7);
+// console.log(1);
+// function f() {
+//     console.log(2)
+// }
+// setTimeout( () => {
+//     console.log(3);
+//     let p = new Promise((res,rej) => {
+//         console.log(4);
+//         res();
+//     });
+//     p.then(()=>f())
+// }, 0);
+// let l = new Promise((res,rej) => {
+//     console.log(5);
+//     rej()
+// });
+// l.then(res => console.log(res)).catch(() => console.log(6));
+// console.log(7);
 // 1 5 7 6 3 4 2
+
+//Task 6
+// async function sleep(ms:number) {
+//   return  new Promise( (res,rej) => {
+//        setTimeout(() => {
+//            console.log(ms);
+//            res();
+//        }, ms * 100);
+//    }
+//    )
+//    }
+//
+//
+// async function show() {
+//     await sleep(3)
+//     await sleep(2)
+//     await sleep(1)
+// }
+//
+// show();
+
+//Task 7
+let pr1 = new Promise( (res) => {
+    res(10)
+})
+let pr2 = new Promise( (res) => {
+    res(0)
+})
+pr1
+    .then((res: any) => {
+        console.log(res);
+        return res + 2;
+    })
+    .then((res: any) => {
+        console.log(res);
+        return res + 2;
+    })
+    .then(console.log)
+
+pr2
+    .then((res: any) => {
+        console.log(res);
+        return res + 1;
+    })
+    .then((res: any) => {
+        console.log(res);
+        return res + 1;
+    })
+    .then(console.log)
+//10 0 12 1 14  2
+
 
 // just a plug
 export default ()=>{};
