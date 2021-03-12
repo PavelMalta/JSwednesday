@@ -2,7 +2,7 @@ console.log('Lesson 6');
 
 // Class
 // https://learn.javascript.ru/classes
-// https://medium.com/front-stories/%D0%BA%D0%B0%D0%BA-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D1%8E%D1%82-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D1%8B-%D0%B2-javascript-7978c0003f1d
+//https://medium.com/front-stories/%D0%BA%D0%B0%D0%BA-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D1%8E%D1%82-%D0%BA%D0%BB%D0 %B0%D1%81%D1%81%D1%8B-%D0%B2-javascript-7978c0003f1d
 // https://www.typescriptlang.org/docs/handbook/classes.html
 // https://www.youtube.com/watch?v=BASquaxab_w
 // https://www.youtube.com/watch?v=uLY9GXGMXaA
@@ -29,6 +29,25 @@ console.log('Lesson 6');
 // Методы: установка значений атрибутов, получение значений атрибутов, вывод информации.
 // Создать массив объектов данного класса.
 // Вывести список покупателей в алфавитном порядке и список покупателей, у которых номер кредитной карточки находится в заданном диапазоне.
+class Customer {
+
+    constructor(options: any) {
+        this.surname = options.surname
+        this.name = options.name
+        this.address = options.address
+        this.bankAccountNumber = options.bankAccountNumber
+    }
+    settingAttributeValues() {
+        console.log('setting attribute values')
+    }
+    gettingAttributeValues() {
+        console.log('getting attribute values')
+    }
+    displayingInformation() {
+        console.log('displaying information')
+    }
+
+}
 
 // Task 05
 // Создать класс машина - имеющий марку, число цилиндров, мощность. Определить конструктор и функцию печати.

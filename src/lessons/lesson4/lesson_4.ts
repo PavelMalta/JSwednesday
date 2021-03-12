@@ -128,18 +128,18 @@ export const rejectPromise = () => {
 // Получите результаты работы промисов, объедините свойства объектов
 // и выведите в консоль {name, age, city}
 
-const pr1: Promise<Object> = new Promise((res) => {
-    setTimeout(res, 2000, {name: "Pavel"})
-})
-const pr2: Promise<Object> = new Promise((res) => {
-    setTimeout(res, 3000, {age: 33})
-})
-const pr3: Promise<Object> = new Promise((res) => {
-    setTimeout(res, 4000, {city: 'Minsk'})
-})
-
-let result: Promise<Array<Object>> = Promise.all([pr1, pr2, pr3])
-result.then(([a,b,c]: Array<Object>) => ({...a, ...b, ...c})).then(console.log)
+// const pr1: Promise<Object> = new Promise((res) => {
+//     setTimeout(res, 2000, {name: "Pavel"})
+// })
+// const pr2: Promise<Object> = new Promise((res) => {
+//     setTimeout(res, 3000, {age: 33})
+// })
+// const pr3: Promise<Object> = new Promise((res) => {
+//     setTimeout(res, 4000, {city: 'Minsk'})
+// })
+//
+// let result: Promise<Array<Object>> = Promise.all([pr1, pr2, pr3])
+// result.then(([a,b,c]: Array<Object>) => ({...a, ...b, ...c})).then(console.log)
 
 
 
