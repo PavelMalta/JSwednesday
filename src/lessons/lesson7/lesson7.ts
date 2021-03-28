@@ -41,5 +41,7 @@ console.log('Lesson 7');
 // Используя метод Apply реализовать свой собственный метод bind
 
 
+
+
 // just a plug
 export default () => {};
