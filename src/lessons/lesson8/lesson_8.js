@@ -1,3 +1,19 @@
+
+
+
+
+/*
+
+const foo = () => {
+	for (let i = 1; i >	0; i++)	{
+		prompt("Nekrasivo!")
+	}
+}
+foo()
+*/
+
+
+
 //A где вернется NaN
 // console.log(10 / 0);
 // console.log(10 / 'five');
